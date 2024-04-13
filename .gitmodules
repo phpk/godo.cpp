@@ -7,3 +7,9 @@
 [submodule "cpps/stable-diffusion.cpp"]
 	path = cpps/stable-diffusion.cpp
 	url = https://github.com/leejet/stable-diffusion.cpp
+[submodule "cpps/chatgml.cpp"]
+	path = cpps/chatgml.cpp
+	url = https://github.com/li-plus/chatglm.cpp
+[submodule "cpps/rwkv.cpp"]
+	path = cpps/rwkv.cpp
+	url = https://github.com/RWKV/rwkv.cpp
