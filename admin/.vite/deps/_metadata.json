@@ -1,0 +1,200 @@
+{
+  "hash": "1665f518",
+  "browserHash": "5ed85223",
+  "optimized": {
+    "@ant-design/colors": {
+      "src": "../../node_modules/@ant-design/colors/es/index.js",
+      "file": "@ant-design_colors.js",
+      "fileHash": "325ea589",
+      "needsInterop": false
+    },
+    "@ant-design/icons-vue": {
+      "src": "../../node_modules/@ant-design/icons-vue/es/index.js",
+      "file": "@ant-design_icons-vue.js",
+      "fileHash": "0a73ede1",
+      "needsInterop": false
+    },
+    "@tinymce/tinymce-vue": {
+      "src": "../../node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js",
+      "file": "@tinymce_tinymce-vue.js",
+      "fileHash": "b44b4c1e",
+      "needsInterop": false
+    },
+    "ant-design-vue": {
+      "src": "../../node_modules/ant-design-vue/es/index.js",
+      "file": "ant-design-vue.js",
+      "fileHash": "73bda03d",
+      "needsInterop": false
+    },
+    "ant-design-vue/es/locale/zh_CN": {
+      "src": "../../node_modules/ant-design-vue/es/locale/zh_CN.js",
+      "file": "ant-design-vue_es_locale_zh_CN.js",
+      "fileHash": "88d943cd",
+      "needsInterop": false
+    },
+    "clipboard": {
+      "src": "../../node_modules/clipboard/dist/clipboard.js",
+      "file": "clipboard.js",
+      "fileHash": "ac9c3625",
+      "needsInterop": true
+    },
+    "cropperjs": {
+      "src": "../../node_modules/cropperjs/dist/cropper.esm.js",
+      "file": "cropperjs.js",
+      "fileHash": "a7420e6e",
+      "needsInterop": false
+    },
+    "dayjs": {
+      "src": "../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "c36b8f5b",
+      "needsInterop": true
+    },
+    "dayjs/locale/zh-cn": {
+      "src": "../../node_modules/dayjs/locale/zh-cn.js",
+      "file": "dayjs_locale_zh-cn.js",
+      "fileHash": "ef4f5f90",
+      "needsInterop": true
+    },
+    "dayjs/plugin/utc": {
+      "src": "../../node_modules/dayjs/plugin/utc.js",
+      "file": "dayjs_plugin_utc.js",
+      "fileHash": "b0afd5b4",
+      "needsInterop": true
+    },
+    "echarts": {
+      "src": "../../node_modules/echarts/index.js",
+      "file": "echarts.js",
+      "fileHash": "27a857cc",
+      "needsInterop": false
+    },
+    "filesize": {
+      "src": "../../node_modules/filesize/dist/filesize.esm.js",
+      "file": "filesize.js",
+      "fileHash": "942138de",
+      "needsInterop": false
+    },
+    "filesize-parser": {
+      "src": "../../node_modules/filesize-parser/index.js",
+      "file": "filesize-parser.js",
+      "fileHash": "578ce319",
+      "needsInterop": true
+    },
+    "js-md5": {
+      "src": "../../node_modules/js-md5/src/md5.js",
+      "file": "js-md5.js",
+      "fileHash": "f66abf22",
+      "needsInterop": true
+    },
+    "jschardet": {
+      "src": "../../node_modules/jschardet/index.js",
+      "file": "jschardet.js",
+      "fileHash": "5937e31a",
+      "needsInterop": true
+    },
+    "lodash-es": {
+      "src": "../../node_modules/lodash-es/lodash.js",
+      "file": "lodash-es.js",
+      "fileHash": "f7af4ff9",
+      "needsInterop": false
+    },
+    "nanoid": {
+      "src": "../../node_modules/nanoid/index.browser.js",
+      "file": "nanoid.js",
+      "fileHash": "f252ec09",
+      "needsInterop": false
+    },
+    "nprogress": {
+      "src": "../../node_modules/nprogress/nprogress.js",
+      "file": "nprogress.js",
+      "fileHash": "f85b8d7e",
+      "needsInterop": true
+    },
+    "overlayscrollbars-vue": {
+      "src": "../../node_modules/overlayscrollbars-vue/overlayscrollbars-vue.mjs",
+      "file": "overlayscrollbars-vue.js",
+      "fileHash": "be37172c",
+      "needsInterop": false
+    },
+    "pinia": {
+      "src": "../../node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "d240acc3",
+      "needsInterop": false
+    },
+    "qrcode": {
+      "src": "../../node_modules/qrcode/lib/browser.js",
+      "file": "qrcode.js",
+      "fileHash": "eaa84c8a",
+      "needsInterop": true
+    },
+    "sortablejs": {
+      "src": "../../node_modules/sortablejs/modular/sortable.esm.js",
+      "file": "sortablejs.js",
+      "fileHash": "c81b4887",
+      "needsInterop": false
+    },
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "66953590",
+      "needsInterop": false
+    },
+    "vue-i18n": {
+      "src": "../../node_modules/vue-i18n/dist/vue-i18n.mjs",
+      "file": "vue-i18n.js",
+      "fileHash": "55e5831c",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "0e136fbf",
+      "needsInterop": false
+    },
+    "xy-enum": {
+      "src": "../../node_modules/xy-enum/dist/esm/index.js",
+      "file": "xy-enum.js",
+      "fileHash": "5e9c2917",
+      "needsInterop": false
+    },
+    "xy-http": {
+      "src": "../../node_modules/xy-http/dist/es/index.min.js",
+      "file": "xy-http.js",
+      "fileHash": "a8b2887f",
+      "needsInterop": false
+    },
+    "xy-storage": {
+      "src": "../../node_modules/xy-storage/dist/es/index.js",
+      "file": "xy-storage.js",
+      "fileHash": "ae3712cc",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-AYVSL3LM": {
+      "file": "chunk-AYVSL3LM.js"
+    },
+    "chunk-QKT3MNYJ": {
+      "file": "chunk-QKT3MNYJ.js"
+    },
+    "chunk-DODVLPOA": {
+      "file": "chunk-DODVLPOA.js"
+    },
+    "chunk-GU3YDFVY": {
+      "file": "chunk-GU3YDFVY.js"
+    },
+    "chunk-DJZYIVHG": {
+      "file": "chunk-DJZYIVHG.js"
+    },
+    "chunk-J7MQI3S7": {
+      "file": "chunk-J7MQI3S7.js"
+    },
+    "chunk-OM56JRPD": {
+      "file": "chunk-OM56JRPD.js"
+    },
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
+    }
+  }
+}
