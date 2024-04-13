@@ -1,3 +1,9 @@
 [submodule "cpps/llama.cpp"]
 	path = cpps/llama.cpp
 	url = https://github.com/ggerganov/llama.cpp.git
+[submodule "cpps/whisper.cpp"]
+	path = cpps/whisper.cpp
+	url = https://github.com/ggerganov/whisper.cpp
+[submodule "cpps/stable-diffusion.cpp"]
+	path = cpps/stable-diffusion.cpp
+	url = https://github.com/leejet/stable-diffusion.cpp
