@@ -13,6 +13,6 @@
 [submodule "cpps/rwkv.cpp"]
 	path = cpps/rwkv.cpp
 	url = https://github.com/RWKV/rwkv.cpp
-[submodule "libs/ollama"]
-	path = libs/ollama
+[submodule "service/cpps/ollama"]
+	path = service/cpps/ollama
 	url = https://github.com/ollama/ollama.git

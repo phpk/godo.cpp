@@ -5,6 +5,9 @@ import (
 
 	"github.com/phpk/godo.cpp/cmd"
 	"github.com/urfave/cli/v2"
+
+	ollamaCmd "github.com/ollama/ollama/cmd"
+	"github.com/spf13/cobra"
 )
 
 // Usage: go build -ldflags "-X main.VERSION=x.x.x"
@@ -19,6 +22,10 @@ var VERSION = "v1.0.0"
 // @schemes http https
 // @basePath /
 func main() {
+	go func() {
+		cobra.CheckErr(ollamaCmd.Run())
+	}()
+
 	app := cli.NewApp()
 	app.Name = "godo.cpp"
 	app.Version = VERSION
