@@ -1,6 +1,6 @@
 [General]
 AppName = "godo.cpp"
-Version = "v10.0.2"
+Version = "v1.0.0"
 Debug = true
 PprofAddr = "" # Pprof monitor address, "localhost:6060"
 DisableSwagger = false
@@ -10,7 +10,7 @@ MenuFile = "menu.json" # Or use "menu_cn.json"
 DenyDeleteMenu = false
 
 [General.HTTP]
-Addr = ":8040"
+Addr = ":8210"
 ShutdownTimeout = 10
 ReadTimeout = 60
 WriteTimeout = 60

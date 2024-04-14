@@ -205,6 +205,53 @@ definitions:
         description: Update time
         type: string
     type: object
+  schema.Parameter:
+    properties:
+      created_at:
+        description: Create time
+        type: string
+      id:
+        description: Unique ID
+        type: string
+      name:
+        description: Name of parameter
+        type: string
+      remark:
+        description: Remark of parameter
+        type: string
+      status:
+        description: Status of parameter (enabled, disabled)
+        type: string
+      updated_at:
+        description: Update time
+        type: string
+      value:
+        description: Value of parameter
+        type: string
+    type: object
+  schema.ParameterForm:
+    properties:
+      name:
+        description: Name of parameter
+        maxLength: 128
+        type: string
+      remark:
+        description: Remark of parameter
+        type: string
+      status:
+        description: Status of parameter (enabled, disabled)
+        enum:
+        - enabled
+        - disabled
+        type: string
+      value:
+        description: Value of parameter
+        maxLength: 1024
+        type: string
+    required:
+    - name
+    - status
+    type: object
   schema.Role:
     properties:
       code:
@@ -893,6 +940,180 @@ paths:
       summary: Update menu record by ID
       tags:
       - MenuAPI
+  /api/v1/parameters:
+    get:
+      parameters:
+      - default: 1
+        description: pagination index
+        in: query
+        name: current
+        required: true
+        type: integer
+      - default: 10
+        description: pagination size
+        in: query
+        name: pageSize
+        required: true
+        type: integer
+      - description: Name of parameter
+        in: query
+        name: name
+        type: string
+      - description: Status of parameter (enabled, disabled)
+        in: query
+        name: status
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/util.ResponseResult'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/schema.Parameter'
+                  type: array
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+      security:
+      - ApiKeyAuth: []
+      summary: Query parameter list
+      tags:
+      - ParameterAPI
+    post:
+      parameters:
+      - description: Request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/schema.ParameterForm'
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/util.ResponseResult'
+            - properties:
+                data:
+                  $ref: '#/definitions/schema.Parameter'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+      security:
+      - ApiKeyAuth: []
+      summary: Create parameter record
+      tags:
+      - ParameterAPI
+  /api/v1/parameters/{id}:
+    delete:
+      parameters:
+      - description: unique id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete parameter record by ID
+      tags:
+      - ParameterAPI
+    get:
+      parameters:
+      - description: unique id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/util.ResponseResult'
+            - properties:
+                data:
+                  $ref: '#/definitions/schema.Parameter'
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+      security:
+      - ApiKeyAuth: []
+      summary: Get parameter record by ID
+      tags:
+      - ParameterAPI
+    put:
+      parameters:
+      - description: unique id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/schema.ParameterForm'
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.ResponseResult'
+      security:
+      - ApiKeyAuth: []
+      summary: Update parameter record by ID
+      tags:
+      - ParameterAPI
   /api/v1/roles:
     get:
       parameters:

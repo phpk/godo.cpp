@@ -9,6 +9,10 @@ package wirex
 import (
 	"context"
 	"github.com/phpk/godo.cpp/internal/mods"
+	"github.com/phpk/godo.cpp/internal/mods/parameter"
+	api3 "github.com/phpk/godo.cpp/internal/mods/parameter/api"
+	biz3 "github.com/phpk/godo.cpp/internal/mods/parameter/biz"
+	dal3 "github.com/phpk/godo.cpp/internal/mods/parameter/dal"
 	"github.com/phpk/godo.cpp/internal/mods/rbac"
 	"github.com/phpk/godo.cpp/internal/mods/rbac/api"
 	"github.com/phpk/godo.cpp/internal/mods/rbac/biz"
@@ -125,9 +129,24 @@ func BuildInjector(ctx context.Context) (*Injector, func(), error) {
 		DB:        db,
 		LoggerAPI: apiLogger,
 	}
+	dalParameter := &dal3.Parameter{
+		DB: db,
+	}
+	bizParameter := &biz3.Parameter{
+		Trans:        trans,
+		ParameterDAL: dalParameter,
+	}
+	apiParameter := &api3.Parameter{
+		ParameterBIZ: bizParameter,
+	}
+	parameterPARAMETER := &parameter.PARAMETER{
+		DB:           db,
+		ParameterAPI: apiParameter,
+	}
 	modsMods := &mods.Mods{
-		RBAC: rbacRBAC,
-		SYS:  sysSYS,
+		RBAC:      rbacRBAC,
+		SYS:       sysSYS,
+		PARAMETER: parameterPARAMETER,
 	}
 	injector := &Injector{
 		DB:    db,
